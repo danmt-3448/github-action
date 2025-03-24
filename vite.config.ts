@@ -13,5 +13,6 @@ export default defineConfig({
   server: {
     host: true,
     port: 3000 // Thay đổi cổng theo nhu cầu của bạn
-  }
+  },
+  base: '/github-action/'
 })
