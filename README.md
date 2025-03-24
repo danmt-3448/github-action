@@ -11,6 +11,7 @@ This guide explains how to build and run the React application using Docker.
 ## Environment Variables
 
 Required environment variables:
+
 ```env
 BUILD_VERSION=1.0.0
 VITE_API_URL=http://staging.localhost:3000/api
@@ -61,5 +62,6 @@ docker-compose up -d --build --force-recreate
 ## Accessing the Application
 
 The application will be available at:
+
 - Development: http://localhost:3000
 - Staging: http://staging.localhost:3000

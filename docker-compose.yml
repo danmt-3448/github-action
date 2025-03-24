@@ -4,7 +4,7 @@ services:
   frontend:
     container_name: template
     image: template:1.0.0
-    build: 
+    build:
       context: .
       args:
         - VITE_API_URL=${VITE_API_URL} # get from .env file
@@ -14,4 +14,3 @@ services:
     ports:
       - '3000:3000'
     command: ['yarn', 'dev']
-    

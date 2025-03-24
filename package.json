@@ -8,11 +8,12 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "lint:fix": "eslint --fix src --ext jsx,ts,tsx",
-    "prettier": "prettier --check \"src/**/(*.jsx|*.tsx|*.ts|*.css|*.scss)\"",
-    "prettier:fix": "prettier --write \"src/**/(*.jsx|*.tsx|*.ts|*.css|*.scss)\"",
+    "lint:fix": "eslint --fix src --ext jsx,ts,tsx,js",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "prepare": "husky install",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "eslint . && prettier --check ."
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
