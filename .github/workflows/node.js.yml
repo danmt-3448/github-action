@@ -35,3 +35,4 @@ jobs:
         with:
           name: production-files
           path: dist
+          retention-days: 1
