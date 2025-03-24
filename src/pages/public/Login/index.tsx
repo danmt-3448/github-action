@@ -23,7 +23,7 @@ const Login = () => {
       // Here you would typically make an API call to authenticate
       await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate API call
       console.log('Login values:', values)
-      login('1234567')
+      login('token')
       // Mock successful login
       navigate(ROUTE_PATHS.DASHBOARD)
     } catch (error) {
