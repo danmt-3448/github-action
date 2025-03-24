@@ -26,12 +26,16 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: List available artifacts
+        run: ls -la ${{ runner.temp }}
 
       - name: Download artifact
         uses: actions/download-artifact@v4

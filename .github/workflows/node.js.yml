@@ -30,6 +30,8 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
 
+      - run: ls -la dist
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
