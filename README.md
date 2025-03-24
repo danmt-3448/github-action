@@ -23,10 +23,10 @@ VITE_API_URL=http://staging.localhost:3000/api
 docker build \
   --build-arg VITE_API_URL=http://staging.localhost:3000/api \
   --build-arg BUILD_VERSION=1.0.0 \
-  -t wellness-admin .
+  -t template .
 
 # Run the container in detached mode
-docker run -dp 3000:3000 -t wellness-admin
+docker run -dp 3000:3000 -t template
 ```
 
 ## Build and Run with Docker Compose
@@ -39,14 +39,14 @@ BUILD_VERSION=1.0.0 VITE_API_URL=http://staging.localhost:3000/api docker-compos
 docker-compose up -d --force-recreate
 
 # Check environment variables in container
-docker exec -it wellness-admin sh -c "cat /app/.env"
+docker exec -it template sh -c "cat /app/.env"
 ```
 
 ## Useful Commands
 
 ```bash
 # View container logs
-docker logs wellness-admin
+docker logs template
 
 # Stop containers
 docker-compose down

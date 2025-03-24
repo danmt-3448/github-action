@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   frontend:
-    container_name: wellness-admin
-    image: wellness-admin:1.0.0
+    container_name: template
+    image: template:1.0.0
     build: 
       context: .
       args:
