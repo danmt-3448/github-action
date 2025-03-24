@@ -43,6 +43,14 @@ jobs:
           name: production-files
           path: dist
 
+      - name: Check if dist directory exists
+        run: |
+          if [ -d "dist" ] && [ "$(ls -A dist)" ]; then
+            echo "dist directory exists and is not empty"
+          else
+            echo "dist directory does not exist or is empty"
+            exit 1
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
