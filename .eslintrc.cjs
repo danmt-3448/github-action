@@ -15,17 +15,17 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react-refresh', 'prettier', 'import'],
   rules: {
     'react-hooks/exhaustive-deps': 0,
-    'no-unused-vars': 'warn',
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     'import/default': 0,
     'import/no-unresolved': 'off',
     'import/no-named-as-default': 0,
     'import/no-named-as-default-member': 0,
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react-refresh/only-export-components': 'off',
     'prettier/prettier': [
       'error',
       {
@@ -40,7 +40,7 @@ module.exports = {
         jsxSingleQuote: true
       }
     ]
-  },
+  }
   // settings: {
   //   'import/resolver': {
   //     typescript: {
